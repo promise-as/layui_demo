@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no,
+  initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>demo</title>
+  <link rel="stylesheet" href="./css/layui.css?t=1545041465443" media="all">
+  <style>
+    .layui-table-view{
+      width: 1245px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<div class="layui-hide" id="demo" lay-filter="test"></div>
+
+<script type="text/html" id="barDemo">
+  <a class="layui-btn layui-btn-primary layui-btn-xs"
+     lay-event="detail">查看</a>
+  <a class="layui-btn layui-btn-xs"
+     lay-event="edit">编辑</a>
+  <a class="layui-btn layui-btn-danger layui-btn-xs"
+     lay-event="del">删除</a>
+</script>
+
+<script src="./layui.js?t=1545041465443"></script>
+<script src="./index.js"></script>
+
+</body>
+</html>
