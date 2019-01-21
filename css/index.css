@@ -1,0 +1,191 @@
+.layui-table-view {
+  width: 1042px;
+  margin: 10px auto;
+}
+
+.layui-table-page {
+  background: rgba(250, 227, 179, 0.3);
+}
+
+/*table header*/
+.layui-table-header {
+  /*border: 1px solid red;*/
+  background-color: #fae3b3;
+
+}
+
+.layui-table-header th {
+  background-color: #fae3b3;
+}
+
+.layui-table-header .laytable-cell-1-0-0 {
+  width: 180px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-1 {
+  width: 110px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-2 {
+  width: 115px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-3 {
+  width: 80px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-4 {
+  width: 150px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-5 {
+  width: 80px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-6 {
+  width: 97px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-7 {
+  width: 100px;
+  text-align: center;
+}
+
+.layui-table-header .laytable-cell-1-0-8 {
+  width: 120px;
+  text-align: center;
+}
+
+/*table body*/
+.layui-table-body {
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-0 {
+  width: 180px;
+}
+
+.layui-table-body .laytable-cell-1-0-1 {
+  width: 110px;
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-2 {
+  width: 115px;
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-3 {
+  width: 80px;
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-4 {
+  width: 150px;
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-5 {
+  width: 80px;
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-6 {
+  width: 97px;
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-7 {
+  width: 100px;
+  text-align: center;
+}
+
+.layui-table-body .laytable-cell-1-0-8 {
+  width: 120px;
+  text-align: center;
+}
+
+.layui-table-total .laytable-cell-1-0-1 {
+  width: 190px;
+  text-align: center;
+}
+
+.layui-table-cell .layui-btn {
+  border-radius: 4px;
+}
+
+.layui-table-cell .layui-btn:first-child {
+  color: #FBCD6C;
+  border: 1px solid #FBCD6C;
+}
+
+.layui-table-cell .layui-btn:first-child:hover {
+  background-color: #FBCD6C;
+  color: white;
+}
+
+.layui-table-cell .layui-btn:nth-child(2) {
+  color: #89B4F4;
+  border: 1px solid #89B4F4;
+}
+
+.layui-table-cell .layui-btn:nth-child(2):hover {
+  background-color: #89B4F4;
+  color: white;
+}
+
+/*隐藏合计*/
+.layui-table-total {
+  display: none;
+}
+
+.layui-table-page .layui-laypage {
+  /*border: 1px solid red;*/
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+/*隐藏工具栏的左边*/
+.layui-table-tool-temp {
+  display: none;
+}
+
+.layui-table-tool-self .layui-inline[title="筛选列"] {
+  display: none;
+}
+
+.layui-table-tool-self .layui-inline[title="打印"] {
+  display: none;
+}
+.layui-inline .layui-icon{
+  /*font-family: "宋体"!important;*/
+}
+
+.layui-table-tool{
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em{
+  background-color: #FAE3B3;
+}
+.layui-laypage a:hover{
+  color: #FBCD6C;
+}
+.layui-laypage-skip input.layui-input:hover{
+  border: 1px solid #FBCD6C;
+}
+
+/*
+.layui-table tr:nth-of-type(2n) {
+  background-color: #F2F2F2;
+}*/

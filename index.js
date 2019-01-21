@@ -3,18 +3,15 @@ layui.config({
 })
 
 layui.use(
-  ['laydate', 'laypage', 'layer', 'table', 'upload', 'element', 'slider'],
+  ['laydate', 'laypage', 'layer', 'table', 'element'],
   function () {
     var laypage = layui.laypage, //分页
       layer = layui.layer, //弹层
-      table = layui.table, //表格
-      upload = layui.upload, //上传
-      slider = layui.slider //滑块
+      table = layui.table //表格
 
     //执行一个 table 实例
     table.render({
       elem: '#demo',
-      height: 580,
       url: './persons.json', // 数据接口,
       title: '用户表',
       page: true, //开启分页,
@@ -22,71 +19,35 @@ layui.use(
       totalRow: true, //开启合计行,
       cols: [ // 列数目
         [ //表头
-          {type: 'checkbox', fixed: 'left'},
-          {field: 'id', title: 'ID', width: 80, sort: true, fixed: 'left', totalRowText: '合计：'},
-          {field: 'username', title: '用户名', width: 80},
-          {field: 'experience', title: '积分', width: 90, sort: true, totalRow: true},
-          {field: 'sex', title: '性别', width: 80, sort: true},
-          {field: 'score', title: '评分', width: 80, sort: true, totalRow: true},
-          {field: 'city', title: '城市', width: 150},
-          {field: 'sign', title: '签名', width: 200},
-          {field: 'classify', title: '职业', width: 100},
-          {field: 'wealth', title: '财富', width: 135, sort: true, totalRow: true},
-          {fixed: 'right', width: 165, align: 'center', toolbar: '#barDemo'}
+          {field: 'orderId', title: '订单编号'},
+          {field: 'thirdPartyOrder', title: '第三方订单'},
+          {field: 'status', title: '订单状态'},
+          {field: 'facilitator', title: '服务商'},
+          {field: 'time', title: '时间'},
+          {field: 'payer', title: '付款人'},
+          {field: 'usdtNumber', title: 'USDT数量'},
+          {field: 'sum', title: '金额(CNY)'},
+          {fixed: 'right', title: '相关操作', toolbar: '#barDemo'}
         ]
       ]
     })
 
-    //监听头工具栏事件
-    table.on('toolbar(test)', function (obj) {
-      var checkStatus = table.checkStatus(obj.config.id),
-        data = checkStatus.data //获取选中的数据
-      switch (obj.event) {
-        case 'add':
-          layer.msg('添加')
-          break
-        case 'update':
-          if (data.length === 0) {
-            layer.msg('请选择一行')
-          } else if (data.length > 1) {
-            layer.msg('只能同时编辑一个')
-          } else {
-            layer.alert('编辑 [id]：' + checkStatus.data[0].id)
-          }
-          break
-        case 'delete':
-          if (data.length === 0) {
-            layer.msg('请选择一行')
-          } else {
-            layer.msg('删除')
-          }
-          break
-      }
-    })
-
     //监听行工具事件
-    //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
-    table.on('tool(test)', function (obj) {
-      var data = obj.data, //获得当前行数据,
-      layEvent = obj.event //获得 lay-event 对应的值
+    //注：tool 是工具条事件名，order 是 table 原始容器的属性 lay-filter="对应的值"
+    table.on('tool(order)', function (obj) {
+      var layEvent = obj.event //获得 lay-event 对应的值
       if (layEvent === 'detail') {
-        layer.msg('查看操作')
-      } else if (layEvent === 'del') {
-        layer.confirm('真的删除行么', function (index) {
-          obj.del() //删除对应行（tr）的DOM结构
-          layer.close(index)
-          //向服务端发送删除指令
-        })
-      } else if (layEvent === 'edit') {
-        layer.msg('编辑操作')
+        layer.msg('详情操作')
+      } else if (layEvent === 'log') {
+        layer.msg('日志操作')
       }
     })
 
     //分页
     laypage.render({
       elem: 'pageDemo', //分页容器的id
-      count: 100, //总页数
-      skin: '#1E9FFF', //自定义选中色值
+      count: 10, //总页数
+      skin: '#FBCD6C', //自定义选中色值
       skip: true, //开启跳页
       jump: function (obj, first) {
         if (!first) {
@@ -94,19 +55,6 @@ layui.use(
         }
       }
     })
-
-    //上传
-    upload.render({
-      elem: '#uploadDemo',
-      url: '', //上传接口
-      done: function (res) {
-        console.log(res)
-      }
-    })
-
-    slider.render({
-      elem: '#sliderDemo',
-      input: true //输入框
-    })
   }
 )
+

@@ -4,26 +4,19 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no,
   initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>demo</title>
+  <title>layUI_分页</title>
   <link rel="stylesheet" href="./css/layui.css?t=1545041465443" media="all">
-  <style>
-    .layui-table-view{
-      width: 1245px;
-      margin: 0 auto;
-    }
-  </style>
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
 
-<div class="layui-hide" id="demo" lay-filter="test"></div>
+<div class="layui-hide" id="demo" lay-filter="order"></div>
 
 <script type="text/html" id="barDemo">
   <a class="layui-btn layui-btn-primary layui-btn-xs"
-     lay-event="detail">查看</a>
-  <a class="layui-btn layui-btn-xs"
-     lay-event="edit">编辑</a>
-  <a class="layui-btn layui-btn-danger layui-btn-xs"
-     lay-event="del">删除</a>
+     lay-event="detail">详情</a>
+  <a class="layui-btn layui-btn-primary layui-btn-xs"
+     lay-event="log">日志</a>
 </script>
 
 <script src="./layui.js?t=1545041465443"></script>
